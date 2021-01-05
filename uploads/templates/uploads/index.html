@@ -1,0 +1,310 @@
+<!Doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  
+
+<style>
+  .templatemo-nav {
+    border-radius: 0;   
+    width: 100%;
+    z-index: 1000;
+}
+  .navbar-default
+    {
+        background: #fff;
+        border: none;
+        box-shadow: none;
+        margin: 0 !important;
+    }
+.navbar-default .navbar-brand
+    {
+        font-weight: 500;
+        font-size: 30px;
+        height: 70px;
+        line-height: 40px;
+        padding: 12px 0px 0px 12px;
+    }
+.navbar-default .navbar-nav li a
+    {
+        font-weight: bold;
+        font-size: 13px;
+        height: 70px;
+        line-height: 40px;
+    }
+
+.navbar-default .navbar-nav > li > a.current { 
+    color: #28A7E9; 
+}
+
+.tm-site-logo {
+    width: 40px;
+    height: 40px;
+    border: 7px solid black;
+    transform: rotate(45deg);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tm-site-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.tm-site-header {
+    padding-top: 5px;
+    padding-bottom: 
+    5px;
+    margin-bottom: 0;
+}
+
+
+ input{
+      color: #28a7e9;
+}
+body
+  {
+    background: #303030;
+     color: #ffffff;
+     margin-top: 80px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden; 
+    }
+h2
+  {
+    text-align: center;
+    font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 40px;
+        text-transform: uppercase;
+  } 
+h2 span
+  {
+    color: #28a7e9;
+    font-weight: bold;
+  }
+    .card{
+        margin-bottom: 25px;
+        background-color: #303030;
+        border-radius: 11px;
+background: linear-gradient(315deg, #2b2b2b, #333333);
+box-shadow:  -11px -11px 27px #2b2b2b, 
+             11px 11px 27px #353535;
+    }
+    .card-img-top{
+        height: 300px;
+        width:400px;
+    }
+   .card-header{
+       text-align: center;
+       text-transform: uppercase;
+       font-weight: bold;
+
+   } 
+   .btn{
+       height: 30px;
+       font-weight:bold;
+       font-size: 12px;
+       border-radius: 5px;
+
+   }
+   form{
+       align-items:left;
+   }
+   h4
+  {
+    color: #28a7e9;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 14px;
+  }
+  h5{
+      text-transform: capitalize;
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top:5px;
+  }
+  .button{
+      color: #2b2b2b;
+  }
+  .nav-link{
+    font-size: 18px;
+  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+
+</style>
+
+
+</head>
+
+<body>
+  {% load static %}
+  {% if user.is_authenticated %}
+   <nav class="navbar  fixed-top navbar-expand-md navbar-light bg-light">
+    <a href="#home" class="navbar-brand">
+     <header class="text-center tm-site-header">
+                    <div class="tm-site-logo"></div>
+                    <h1 class="pl-4 tm-site-title"> IMAGEREPOSITORY</h1>
+                </header></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ml-auto">
+        <a href="/#" class="nav-item nav-link "><i class="fa fa-home">Home</i></a>
+        
+        <a href="/uploads" class="nav-item nav-link "><i class="fa fa-dashboard">Uploads</i></a>
+ 
+        <div class="nav-item dropdown">
+          <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <i class=" fa fa-user-o"> Login</i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/login"><i class="fa fa-user-circle nav-link" > Login</i></a>
+            <a class="dropdown-item" href="/register"><i class="fa fa-sign-in nav-link"> Register</i></a>
+            <a class="dropdown-item" href="/logout"><i class="fa fa-sign-in nav-link"> Logout</i></a>
+            
+        </div>
+        </div>
+      
+      
+    
+          </div>
+      </div>
+    
+  </nav>
+    <div class="container">
+        <section>
+            <div class="card " style="width:300px; margin-left:20px;">
+                <div class="card-header"><h4>Upload Images</h4></div>
+                <div class="card-body">
+                    <form id="post_form" method="post" action="" enctype="multipart/form-data">
+    
+                        {% csrf_token %}
+                            <h5>Title:</h5>
+                            <input type="text" name="title" maxlength="128" required id="id_title"> <br>
+                            <h5>Public:</h5>
+                            <input type="checkbox" name="public" id="id_public"> <br>
+                        
+                        
+                        
+                        
+                    
+                    <input type="hidden" name="form-TOTAL_FORMS" value="3" id="id_form-TOTAL_FORMS"> <input type="hidden" name="form-INITIAL_FORMS" value="0" id="id_form-INITIAL_FORMS"> <input type="hidden" name="form-MIN_NUM_FORMS" value="0" id="id_form-MIN_NUM_FORMS"> <input type="hidden" name="form-MAX_NUM_FORMS" value="1000" id="id_form-MAX_NUM_FORMS">
+                    
+                    
+                    
+                        <div class="multiField">
+                            
+                    
+                    <div id="div_id_form-0-image" class="form-group"> <label for="id_form-0-image" class=" requiredField">
+                                    Image<span class="asteriskField"></span> </label> <div class=""> <input type="file" name="form-0-image" accept="image/" class="clearablefileinput form-control-file" id="id_form-0-image"> </div> </div> <input type="hidden" name="form-0-id" id="id_form-0-id">
+                    
+                        </div>
+                    
+                        <div class="multiField">
+                            
+                    
+                    <div id="div_id_form-1-image" class="form-group"> <label for="id_form-1-image" class=" requiredField">
+                                    Image<span class="asteriskField"></span> </label> <div class=""> <input type="file" name="form-1-image" accept="image/" class="clearablefileinput form-control-file" id="id_form-1-image"> </div> </div> <input type="hidden" name="form-1-id" id="id_form-1-id">
+                    
+                        </div>
+                    
+                        <div class="multiField">
+                            
+                    
+                    <div id="div_id_form-2-image" class="form-group"> <label for="id_form-2-image" class=" requiredField">
+                                    Image<span class="asteriskField"></span> </label> <div class=""> <input type="file" name="form-2-image" accept="image/" class="clearablefileinput form-control-file" id="id_form-2-image"> </div> </div> <input type="hidden" name="form-2-id" id="id_form-2-id">
+                    
+                        </div>
+                    
+                    
+                    
+                        <input class="button" type="submit" name="submit" value="Submit" />
+                    </form>
+    
+</div>
+</div>
+<br><br>
+</section>
+
+<section>
+<h2><span>Your Uploads</span></h2>
+          <span><a href="delete/all" type="button" class="float-right btn btn-danger " width="90px">DeleteAll</a></span>
+
+            <div class="row">
+        {% for i in user.post_set.all %}
+        {% for im in i.images_set.all %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header"><h4>{{i.title}}</h4></div>
+                        <div class="card-body">
+                            <img class="card-img-top img-fluid" src={{ im.image.url }} alt="Card image cap" width="300" height="300">
+                            </div>
+                            <div class="card-footer">
+                                <a href="delete/{{im.id}}" type="button" class="btn btn-danger  ">Delete</a>
+                            </div>
+                    </div>
+
+                </div>
+        
+        {% endfor %}
+        {% endfor %}
+          
+        
+
+</section>
+<br><br>
+ <h2><span>Public images</span></h2>
+ 
+ 
+        {% for post in public_posts %}
+        {% for im in post.images_set.all %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header"><h4>{{post.title}}</h4></div>
+                        <div class="card-body">
+                            <img class="card-img-top img-fluid " src={{ im.image.url }} alt="Card image cap" width="300" height="300">
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+        {% endfor %}
+            
+    
+    </div>
+</div>
+{% else %}\
+<script>
+     location.replace('/login')
+ </script>
+{% endif %}
+
+</body>
+</html>
