@@ -1,3 +1,5 @@
+Website built on django using django formsets for multiple file upload and images stored in aws s3.
+
 # ImageRepository
 
 This is an image repository where users can log in and upload images and make them private and public. 
